@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:state_pressed="true" android:drawable="@drawable/fm_search_success_item_d"></item>
-    <item android:state_pressed="false" android:drawable="@drawable/fm_search_success_item_u"></item>
-    <item android:drawable="@drawable/fm_search_success_item_u"></item>
-
-</selector>
