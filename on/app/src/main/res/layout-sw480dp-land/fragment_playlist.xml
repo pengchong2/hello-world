@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fm_playlist_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/fm_thumb_shape"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <include
+        android:id="@+id/fm_playlist_nodata_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_nodata_list"
+        android:visibility="gone"/>
+
+</RelativeLayout>

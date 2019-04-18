@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fm_search_re"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/fm_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="90px">
+
+        <Button
+            android:id="@+id/fm_search_etback"
+            android:layout_width="114px"
+            android:layout_height="90px"
+            android:layout_marginStart="15px"
+            android:background="@drawable/selector_play_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="30px"
+            android:text="@string/search_title"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/fm_search_hisdelete"
+            android:layout_width="150px"
+            android:layout_height="90px"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10px"
+            android:layout_marginRight="20px"
+            android:textSize="22px"
+            android:textColor="@color/fm_search_delete_color"
+            android:text="@string/fm_search_real_delete_txt"
+            android:background="@drawable/fm_search_clear_selector"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/fm_search_input_re"
+        android:layout_width="match_parent"
+        android:layout_height="72px"
+        android:layout_below="@id/fm_search_title"
+        android:background="@drawable/background">
+
+        <EditText
+            android:id="@+id/fm_search_input_et"
+            android:layout_width="864px"
+            android:layout_height="72px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:hint="@string/fm_search_real_input_txt"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="26px"
+            android:background="@mipmap/fm_search_real_input"/>
+
+        <Button
+            android:id="@+id/fm_search_reset_btn"
+            android:layout_width="114px"
+            android:layout_height="72px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/fm_search_reset_selector"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/fm_search_history_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fm_search_input_re">
+
+        <RelativeLayout
+            android:id="@+id/fm_search_history_re1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="35px"
+                android:textSize="22px"
+                android:textColor="@color/fm_play_txt_color"
+                android:text="@string/fm_search_real_history_txt"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fm_search_hiscontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fm_search_history_re1"
+            android:layout_marginTop="10px"
+            android:paddingLeft="51px"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fm_search_history_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/fm_thumb_shape"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fm_searchsuc_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fm_search_input_re"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:layout_marginTop="8px"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fm_search_success_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/fm_thumb_shape"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fm_search_associ_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fm_search_input_re"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="8px"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/fm_search_disnetwork_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="213px"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fm_search_disnetwork_iv"
+            android:layout_width="146px"
+            android:layout_height="155px"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/fm_disnetwork"/>
+
+        <TextView
+            android:id="@+id/fm_search_disnetwork_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fm_search_disnetwork_iv"
+            android:textSize="22px"
+            android:textColor="@color/fm_play_txt_color"
+            android:text="@string/fm_disnetwork_txt"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fm_searchfail_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="213px"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fm_searchfail_iv"
+            android:layout_width="122px"
+            android:layout_height="155px"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/fm_nodata"/>
+
+        <TextView
+            android:id="@+id/fm_collect_nodata_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fm_searchfail_iv"
+            android:textSize="22px"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/fm_play_txt_color"
+            android:text="@string/fm_search_real_fail_txt"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
