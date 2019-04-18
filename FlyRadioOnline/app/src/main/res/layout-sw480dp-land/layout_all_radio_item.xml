@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlAllRadioItemContainer"
+    android:layout_width="@dimen/radio_name_width"
+    android:layout_height="@dimen/radio_name_height"
+    android:background="@drawable/all_radio_item_background_d">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/homepage_text_size" />
+</RelativeLayout>

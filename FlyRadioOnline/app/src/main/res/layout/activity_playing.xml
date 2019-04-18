@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:voisePlayingIconAttr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fm_list_mengban"
+    tools:context=".task.play.activity.PlayingActivity">
+
+    <RelativeLayout
+        android:id="@+id/fm_list_play_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/fm_list_mengban"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/fm_list_back"
+            android:layout_width="114px"
+            android:layout_height="90px"
+            android:layout_marginStart="15px"
+            android:background="@drawable/selector_play_back"/>
+
+        <RadioGroup
+            android:id="@+id/fm_playday_rg"
+            android:layout_width="330px"
+            android:layout_height="90px"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/fm_lastday_rb"
+                android:layout_width="110px"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="昨天"
+                android:textStyle="normal"
+                android:textSize="22px"
+                android:textColor="@color/selector_list_color"
+                android:background="@drawable/seletor_list"/>
+
+            <RadioButton
+                android:id="@+id/fm_today_rb"
+                android:layout_width="110px"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="今天"
+                android:textSize="22px"
+                android:textStyle="normal"
+                android:textColor="@color/selector_list_color"
+                android:background="@drawable/seletor_list"/>
+
+            <RadioButton
+                android:id="@+id/fm_tomorrow_rb"
+                android:layout_width="110px"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="明天"
+                android:textStyle="normal"
+                android:textSize="22px"
+                android:textColor="@color/selector_list_color"
+                android:background="@drawable/seletor_list"/>
+
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/fm_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fm_playday_rg"
+            android:layout_marginStart="20px"
+            android:layout_marginEnd="20px"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fm_main_play_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/fm_play_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px">
+
+            <Button
+                android:id="@+id/fm_img_back"
+                android:layout_width="114px"
+                android:layout_height="90px"
+                android:layout_marginStart="15px"
+                android:background="@drawable/selector_play_back" />
+
+            <RelativeLayout
+                android:id="@+id/fm_play_radio_name_re"
+                android:layout_width="match_parent"
+                android:layout_height="64px"
+                android:layout_marginTop="7px"
+                android:layout_marginStart="130px"
+                android:layout_marginEnd="130px">
+
+                <TextView
+                    android:id="@+id/fm_tv_program_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/playing_program_name"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/fm_tv_playing_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/fm_tv_program_name"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="32px"
+                    android:text="@string/playing_type_back_to_listen"
+                    android:textSize="16px"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@mipmap/mp3_playing_back_to_listen"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fm_tv_show_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fm_play_radio_name_re"
+                android:text="电台"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16px"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="21px">
+
+            <ImageView
+                android:id="@+id/fm_img_album_picture"
+                android:layout_width="250px"
+                android:layout_height="250px"
+                android:background="@mipmap/mp3_play_no_album_picture" />
+
+            <ImageView
+                android:layout_width="250px"
+                android:layout_height="250px"
+                android:background="@drawable/media_main_album_mengban" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="23px">
+
+            <SeekBar
+                android:id="@+id/fm_sb_playing_slider"
+                android:layout_width="680px"
+                android:layout_height="23px"
+                android:layout_centerInParent="true"
+                android:paddingLeft="5px"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/mp3_slider" />
+
+            <TextView
+                android:id="@+id/fm_tv_playing_playtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="00:00"
+                android:textSize="14px"
+                android:layout_marginRight="13px"
+                android:layout_toLeftOf="@+id/fm_sb_playing_slider"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/fm_tv_playing_alltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="00:00"
+                android:textSize="14px"
+                android:layout_marginLeft="13px"
+                android:layout_toRightOf="@+id/fm_sb_playing_slider"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="16px"
+            android:orientation="horizontal"
+            android:background="@mipmap/fm_btn_bg">
+
+            <Button
+                android:id="@+id/fm_img_list"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:background="@drawable/seletor_play_list"/>
+            <Button
+                android:id="@+id/fm_img_previous"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:background="@drawable/seletor_prev"
+                android:layout_marginLeft="76px"/>
+            <Button
+                android:id="@+id/fm_img_play_state"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:background="@drawable/seletor_play"/>
+            <Button
+                android:id="@+id/fm_img_next"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:background="@drawable/seletor_next" />
+            <Button
+                android:id="@+id/fm_img_collection"
+                android:layout_width="151px"
+                android:layout_height="80px"
+                android:background="@drawable/seletor_collection"
+                android:layout_marginLeft="74px"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
